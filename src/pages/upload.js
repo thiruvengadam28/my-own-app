@@ -1,8 +1,9 @@
 // pages/upload.js
 import { useState } from 'react';
 import Link from 'next/link';
-import DateTimeDisplay from '../components/DateTimeDisplay';
-import ImageInfoBox from '../components/ImageInfoBox';
+import DateTimeDisplay from '../../components/DateTimeDisplay';
+import ImageInfoBox from '../../components/ImageInfoBox';
+import Layout from '../../components/Layout';
 
 export default function UploadPage() {
   const [imagePreview, setImagePreview] = useState(null);
