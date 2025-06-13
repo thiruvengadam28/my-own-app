@@ -1,23 +1,25 @@
+// pages/upload.js
 import { useState } from 'react';
 import Link from 'next/link';
+import DateTimeDisplay from '../components/DateTimeDisplay';
+import ImageInfoBox from '../components/ImageInfoBox';
 
 export default function UploadPage() {
   const [imagePreview, setImagePreview] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    setSelectedFile(file);
     const reader = new FileReader();
-    reader.onloadend = () => {
-      setImagePreview(reader.result);
-    };
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+    reader.onloadend = () => setImagePreview(reader.result);
+    if (file) reader.readAsDataURL(file);
   };
 
   return (
     <div className="container">
       <h1>Upload Image</h1>
+      <DateTimeDisplay />
       <input type="file" accept="image/*" onChange={handleImageChange} />
       <div className="preview-box">
         {imagePreview ? (
@@ -26,6 +28,7 @@ export default function UploadPage() {
           <p>Image preview will appear here.</p>
         )}
       </div>
+      <ImageInfoBox file={selectedFile} />
       <Link href="/result">
         <button style={{ marginTop: '20px' }}>Analyze Image</button>
       </Link>
