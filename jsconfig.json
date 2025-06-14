@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "src"
+    "baseUrl": "src/components/Layout.js"
   },
-  "include": ["src"]
+  "include": ["src/components/Layout.js"]
 }
 
