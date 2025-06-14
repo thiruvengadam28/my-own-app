@@ -5,7 +5,8 @@ export default function HomePage() {
     <div className="container">
       <h1>👁️‍🗨️ Welcome to InSightAI</h1>
       <img 
-        src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="InSightAI Logo" 
+        src="https://cdn-icons-png.flaticon.com/512/7437/7437542.png" 
+        alt="AI Vision" 
         style={{ width: '100px', marginBottom: '20px' }}
       />
       <p>Choose a feature to begin exploring AI-powered image analysis:</p>

@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",         // Root of your project
-    "paths": {
-      "@/*": ["./*"]        // Allow @/components/... style imports
-    }
-  }
+    "baseUrl": "src"
+  },
+  "include": ["src"]
 }
