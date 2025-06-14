@@ -32,7 +32,12 @@ export default function UploadPage() {
 
       <div className="preview-box">
         {imagePreview ? (
-          <img src={imagePreview} alt="Preview" className="preview-img" />
+          <img
+            src={imagePreview}
+            alt="Preview"
+            className="preview-img"
+            style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px' }}
+          />
         ) : (
           <p>🖼️ Image preview will appear here.</p>
         )}
