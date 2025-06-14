@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import DateTimeDisplay from '../components/DateTimeDisplay';
-import ImageInfoBox from '../components/ImageInfoBox';
-
+import DateTimeDisplay from '../../components/DateTimeDisplay';
+import ImageInfoBox from '../../components/ImageInfoBox';
 export default function UploadPage() {
   const [imagePreview, setImagePreview] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
