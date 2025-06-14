@@ -1,17 +1,23 @@
-// pages/home.js
 import Link from 'next/link';
 
 export default function HomePage() {
   return (
     <div className="container">
-      <h1>Welcome to InSightAI</h1>
-      <p>Choose a feature to begin:</p>
+      <h1>👁️‍🗨️ Welcome to InSightAI</h1>
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="InSightAI Logo" 
+        style={{ width: '100px', marginBottom: '20px' }}
+      />
+      <p>Choose a feature to begin exploring AI-powered image analysis:</p>
+
       <Link href="/upload">
-        <button style={{ marginBottom: '10px' }}>📤 Upload Image</button>
+        <button style={{ margin: '10px' }}>📤 Upload Image</button>
       </Link>
-      <br />
+      <Link href="/result">
+        <button style={{ margin: '10px' }}>📑 View Last Result</button>
+      </Link>
       <Link href="/analysis">
-        <button>📊 Advanced Analysis</button>
+        <button style={{ margin: '10px' }}>📊 Advanced Analysis</button>
       </Link>
     </div>
   );
