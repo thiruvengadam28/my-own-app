@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "https://github.com/thiruvengadam28/my-own-app"
+    "baseUrl": ".",         // Root of your project
+    "paths": {
+      "@/*": ["./*"]        // Allow @/components/... style imports
+    }
   }
 }
