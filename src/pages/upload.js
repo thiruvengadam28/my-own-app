@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import Link from 'next/link';
-import DateTimeDisplay from 'components/DateTimeDisplay';
-import ImageInfoBox from 'components/ImageInfoBox';
+import ImageInfoBox from '../components/ImageInfoBox';
 
+const DateTimeDisplay = dynamic(() => import('../components/DateTimeDisplay'), { ssr: false });
 
 export default function UploadPage() {
   const [imagePreview, setImagePreview] = useState(null);
@@ -21,24 +22,12 @@ export default function UploadPage() {
   return (
     <div className="container">
       <h1>📤 Upload Image for AI Analysis</h1>
-
       <DateTimeDisplay />
-
-      <input
-        type="file"
-        accept="image/*"
-        onChange={handleImageChange}
-        style={{ margin: '16px 0' }}
-      />
+      <input type="file" accept="image/*" onChange={handleImageChange} style={{ margin: '16px 0' }} />
 
       <div className="preview-box">
         {imagePreview ? (
-          <img
-            src={imagePreview}
-            alt="Preview"
-            className="preview-img"
-            style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px' }}
-          />
+          <img src={imagePreview} alt="Preview" className="preview-img" style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px' }} />
         ) : (
           <p>🖼️ Image preview will appear here.</p>
         )}

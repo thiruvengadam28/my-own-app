@@ -8,7 +8,6 @@ export default function DateTimeDisplay() {
     const interval = setInterval(() => {
       setDateTime(new Date());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -38,3 +37,4 @@ const styles = {
     color: '#555',
   },
 };
+

@@ -1,7 +1,7 @@
+// jsconfig.json
 {
   "compilerOptions": {
-    "baseUrl": "src/components/Layout.js"
+    "baseUrl": "src"
   },
-  "include": ["src/components/Layout.js"]
+  "include": ["src"]
 }
-

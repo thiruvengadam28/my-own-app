@@ -1,7 +1,7 @@
-// components/Layout.js
+// components/Alayout.js
 import Link from 'next/link';
 
-export default function Layout({ children }) {
+export default function Alayout({ children }) {
   return (
     <>
       <nav className="navbar">
